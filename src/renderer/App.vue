@@ -21,11 +21,21 @@
 </template>
 
 <script>
-  export default {
-    name: 'my-project'
-  }
+export default {
+  name: 'my-project'
+}
 </script>
 
 <style>
-  /* CSS */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Indie Flower', cursive;
+}
 </style>
