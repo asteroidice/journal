@@ -1,10 +1,10 @@
-# my-project
+# Journal
 
-> An electron-vue project
+> An app for tracking whatever every day. Build on electron & Vue.
 
 #### Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -20,7 +20,6 @@ npm test
 
 # lint all JS/Vue component files in `src/`
 npm run lint
-
 ```
 
 ---
