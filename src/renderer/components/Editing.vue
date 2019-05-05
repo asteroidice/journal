@@ -1,15 +1,34 @@
 <template>
   <div id="wrapper">
-    <input id="title" class="input" v-model="title" placeholder="Today's Title" />
+    <input
+      id="title"
+      class="input"
+      v-model="title"
+      placeholder="Today's Title"
+    />
     <!-- <datepicker class="input" v-model="date" placeholder="Select Date"></datepicker> -->
-    <div date="date" class="input">{{date.toLocaleDateString('en-us', {'year': 'numeric', 'month': 'long', 'day': 'numeric'})}}</div>
-    <textarea id="main" class="input" v-model="inputText" autofocus placeholder="What happened today?"></textarea>
-
+    <div date="date" class="input">
+      {{
+        date.toLocaleDateString('en-us', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })
+      }}
+    </div>
+    <textarea
+      id="main"
+      class="input"
+      v-model="inputText"
+      autofocus
+      placeholder="What happened today?"
+    ></textarea>
   </div>
 </template>
 
 <script>
 import Datepicker from 'vuejs-datepicker'
+
 export default {
   name: 'landing-page',
   components: {
@@ -26,7 +45,7 @@ export default {
 </script>
 
 <style>
- /*@import url('https://fonts.googleapis.com/css?family=Merriweather:700'); */
+/*@import url('https://fonts.googleapis.com/css?family=Merriweather:700'); */
 #wrapper {
   background: radial-gradient(
     ellipse at top left,
