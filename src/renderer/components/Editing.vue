@@ -19,7 +19,7 @@
     <textarea
       id="main"
       class="input"
-      v-model="inputText"
+      v-model="body"
       autofocus
       placeholder="What happened today?"
     ></textarea>
@@ -34,12 +34,27 @@ export default {
   components: {
     Datepicker
   },
-  data: () => {
-    return {
-      inputText: '',
-      title: '',
-      date: new Date(Date.now())
+  computed: {
+    entry() {
+      const entryId = this.$route.params.id
+      // TODO: Probably not a bad idea to move this to a getter.
+      const entry = this.$store.state.Entries[entryId]
+      this.title = entry.title
+      return entry
     }
+  },
+  data() {
+    return {
+      body: '',
+      title: '',
+      date: Date.now()
+    }
+  },
+  beforeMount() {
+    const { title, body, date } = this.entry
+    this.title = title
+    this.body = body
+    this.date = new Date(date)
   }
 }
 </script>

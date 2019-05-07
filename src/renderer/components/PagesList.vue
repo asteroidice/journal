@@ -39,7 +39,12 @@ export default {
   },
   computed: {
     entries() {
-      return this.$store.state.Entries
+      // TODO: Should probably move this to a getter.
+      const entries = this.$store.state.Entries
+      return Object.entries(entries).map(([id, value]) => ({
+        id,
+        ...value
+      }))
     }
   }
 }

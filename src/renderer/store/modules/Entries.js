@@ -1,11 +1,11 @@
-const state = [
-  {
+const state = {
+  'f8863efe-681a-42ab-9711-401852753eca': {
     id: 'f8863efe-681a-42ab-9711-401852753eca',
     body: 'Imaging, Respiratory System, Computerized Tomography (CT Scan)',
     title: 'Cross-group bi-directional internet solution',
-    date: '1469917687'
+    date: 1469917687
   }
-]
+}
 
 const mutations = {
   NEW_ENTRY(state, entryID) {
